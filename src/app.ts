@@ -6,6 +6,7 @@ import { StudentRoutes } from './app/modules/student/student.route';
 import { MentorRoutes } from './app/modules/mentor/mentor.routes';
 import { CourseRoutes } from './app/modules/courses/course.routes';
 import { CategoryRoutes } from './app/modules/courseCategory/courseCategory.routes';
+import { AuthRoutes } from './app/modules/auth/auth.routes';
 
 
 const app: Application = express();
@@ -16,6 +17,7 @@ app.use(cors());
 
 // application routes
 app.use('/api/user', UserRoutes);
+app.use('/api/auth', AuthRoutes);
 app.use('/api/students', StudentRoutes);
 app.use('/api/mentors', MentorRoutes);
 app.use('/api/courses', CourseRoutes);
